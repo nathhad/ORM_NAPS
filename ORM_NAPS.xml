@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0"
     author="Chuck Sanders nathhad@gmail.com"
-    version="0.1.3"
+    version="0.1.4"
     shortdescription="OpenRailwayMap North America Presets File"
     description="Preset for most common tag combinations in North America"
 	link="https://wiki.openstreetmap.org/wiki/OpenRailwayMap/Tagging_in_North_America#Useful_Combination"
@@ -50,7 +50,6 @@
 		<label text="(Enter space and mph after numeric value if not in kph.)" />
 		</optional>
 		<key key="tiger:reviewed" />
-		<key key="service" />
 	</item>
 	<item name="Active Service Track (with Service=*)" type="way">
 		<label text="Questions?  See wiki OpenRailwayMap/Tagging in North America." />
@@ -89,7 +88,6 @@
 		<label text="(Enter space and mph after numeric value if not in kph.)" />
 		</optional>
 		<key key="tiger:reviewed" />
-		<key key="usage" />
 	</item>
 	<group name="Inactive Tracks">
 	<item name="Railway=Disused" type="way">
@@ -111,7 +109,8 @@
 		<combo key="service" text="service=*" values="spur,yard,siding,crossover" 
 				default=""
 				values_sort="false"/>
-		<label text="Do not enter a value for both usage and service!" />
+		<label text="Please do not enter a value for both usage and service," />
+		<label text="     unless the usage=industrial or =military." />
 		<space />
 		<combo key="operator" text="operator=*" values="BNSF Railway,Canadian National Railway,Canadian Pacific Railway,CSX Transportation,Ferromex,Grand Trunk Corporation,Kansas City Southern Railway,Kansas City Southern de México,Norfolk Southern Railway,Union Pacifc Railroad" 
 				use_last_as_default="true"/>
@@ -120,6 +119,8 @@
 		<space />
 		<text key="name" text="name=*" default=""/>
 		<label text="(Railroad Subdivision.  Please leave blank if unknown.)" />
+		<text key="ref" text="ref=*" default=""/>
+		<label text="(Line Segment Number.  Please leave blank if unknown.)" />
 		<optional>
 		<combo key="gauge" text="gauge=*" values="1435,914,1067" 
 				display_values="Standard,3ft/36in,3.5ft/42in"
@@ -142,30 +143,33 @@
 				use_last_as_default="true"
 				values_sort="false"/>
 		<space />
-		<combo key="usage" text="usage=*" values="main,branch,industrial,military,tourism" 
+		<combo key="abandoned:usage" text="abandoned:usage=*" values="main,branch,industrial,military,tourism" 
 				display_values="Main, Branch, Industrial, Military, Tourism"
 				default=""
 				values_sort="false"/>	
 		<label text="-OR-" />
-		<combo key="service" text="service=*" values="spur,yard,siding,crossover" 
+		<combo key="abandoned:service" text="abandoned:service=*" values="spur,yard,siding,crossover" 
 				use_last_as_default="true"
 				values_sort="false"/>
+		<label text="Please do not enter a value for both usage and service," />
+		<label text="     unless the usage=industrial or =military." />
 		<space />
-		<label text="Do not enter a value for both usage and service!" />
-		<combo key="operator" text="operator=*" values="BNSF Railway,Canadian National Railway,Canadian Pacific Railway,CSX Transportation,Ferromex,Grand Trunk Corporation,Kansas City Southern Railway,Kansas City Southern de México,Norfolk Southern Railway,Union Pacifc Railroad" 
+		<combo key="abandoned:operator" text="abandoned:operator=*" values="BNSF Railway,Canadian National Railway,Canadian Pacific Railway,CSX Transportation,Ferromex,Grand Trunk Corporation,Kansas City Southern Railway,Kansas City Southern de México,Norfolk Southern Railway,Union Pacifc Railroad" 
 				use_last_as_default="true"/>
-		<combo key="reporting_marks" text="reporting_marks=*" values="BNSF,CN,CP,CSXT,FXE,GTW,KCS,KCSM,NS,UP" 
+		<combo key="abandoned:reporting_marks" text="abandoned:reporting_marks=*" values="BNSF,CN,CP,CSXT,FXE,GTW,KCS,KCSM,NS,UP" 
 				use_last_as_default="true"/>
 		<space />
-		<text key="name" text="name=*" default="" />
+		<text key="abandoned:name" text="name=*" default="" />
 		<label text="(Railroad Subdivision.  Please leave blank if unknown.)" />
+		<text key="abandoned:ref" text="ref=*" default=""/>
+		<label text="(Line Segment Number.  Please leave blank if unknown.)" />
 		<optional>
 		<combo key="gauge" text="gauge=*" values="1435,914,1067" 
 				display_values="Standard,3ft/36in,3.5ft/42in"
 				use_last_as_default="true"
 				values_sort="false"/>
 		<label text="(Enter as integer in mm if gauge not in list.)" />
-		<text key="description" text="description=*" default="" />
+		<text key="abandoned:description" text="abandoned:description=*" default="" />
 		<label text="(Actual RR Co. track name.  Please leave blank if unknown.)" />
 		</optional>
 		<key key="tiger:reviewed" />
@@ -181,22 +185,23 @@
 				use_last_as_default="true"
 				values_sort="false"/>
 		<space />
-		<combo key="usage" text="usage=*" values="main,branch,industrial,military,tourism" 
+		<combo key="razed:usage" text="razed:usage=*" values="main,branch,industrial,military,tourism" 
 				display_values="Main, Branch, Industrial, Military, Tourism"
 				default=""
 				values_sort="false"/>	
 		<label text="-OR-" />
-		<combo key="service" text="service=*" values="spur,yard,siding,crossover" 
+		<combo key="razed:service" text="razed:service=*" values="spur,yard,siding,crossover" 
 				use_last_as_default="true"
 				values_sort="false"/>
+		<label text="Please do not enter a value for both usage and service," />
+		<label text="     unless the usage=industrial or =military." />
 		<space />
-		<label text="Do not enter a value for both usage and service!" />
-		<combo key="operator" text="operator=*" values="BNSF Railway,Canadian National Railway,Canadian Pacific Railway,CSX Transportation,Ferromex,Grand Trunk Corporation,Kansas City Southern Railway,Kansas City Southern de México,Norfolk Southern Railway,Union Pacifc Railroad" 
+		<combo key="razed:operator" text="razed:operator=*" values="BNSF Railway,Canadian National Railway,Canadian Pacific Railway,CSX Transportation,Ferromex,Grand Trunk Corporation,Kansas City Southern Railway,Kansas City Southern de México,Norfolk Southern Railway,Union Pacifc Railroad" 
 				use_last_as_default="true"/>
-		<combo key="reporting_marks" text="reporting_marks=*" values="BNSF,CN,CP,CSXT,FXE,GTW,KCS,KCSM,NS,UP" 
+		<combo key="razed:reporting_marks" text="razed:reporting_marks=*" values="BNSF,CN,CP,CSXT,FXE,GTW,KCS,KCSM,NS,UP" 
 				use_last_as_default="true"/>
 		<space />
-		<text key="name" text="name=*" default="" />
+		<text key="razed:name" text="razed:name=*" default="" />
 		<label text="(Railroad Subdivision.  Please leave blank if unknown.)" />
 		<optional>
 		<combo key="gauge" text="gauge=*" values="1435,914,1067" 
@@ -204,7 +209,7 @@
 				use_last_as_default="true"
 				values_sort="false"/>
 		<label text="(Enter as integer in mm if gauge not in list.)" />
-		<text key="description" text="description=*" default="" />
+		<text key="razed:description" text="razed:description=*" default="" />
 		<label text="(Actual RR Co. track name.  Please leave blank if unknown.)" />
 		</optional>
 		<key key="tiger:reviewed" />
@@ -222,6 +227,8 @@
 		<text key="layer" text="layer=*" default="1" />
 		<optional>
 		<text key="bridge:name" text="bridge:name=*" default="" />
+		<text key="railway:position" text="Milepost:" default="" />
+		<space />
 		<label text="If movable, type:" />
 		<combo key="bridge:movable" text="bridge:movable=*" values="bascule,lift,swing" 
 				default=""/>
@@ -238,9 +245,12 @@
 		<label text="Questions?  See wiki OpenRailwayMap/Tagging in North America." />
 		<space />
 		<label text="Required Attributes:" />
-		<space />
-		<check key="tunnel" text="tunnel=yes" default="off" value_off=""/>
+		<space />>
+		<key key="tunnel" value="yes" />
 		<text key="layer" text="layer=*" default="1" />
+		<optional>
+		<text key="railway:position" text="Milepost:" default="" />
+		</optional>
 	</item>
 	<separator />
 	<item name="Railway Crossing (quick-apply)" type="node">
@@ -277,13 +287,16 @@
 		<label text="Questions?  See wiki OpenRailwayMap/Tagging in North America." />
 		<space />
 		<label text="Required Attributes:" />
-		<space />
-		<check key="railway" text="railway=yard" value_on="yard" default="off" value_off=""/>
+		<space />>
+		<key key="railway" value="yard" />
 		<text key="name" text="name=*" default="" />
 		<combo key="operator" text="operator=*" values="BNSF Railway,Canadian National Railway,Canadian Pacific Railway,CSX Transportation,Ferromex,Grand Trunk Corporation,Kansas City Southern Railway,Kansas City Southern de México,Norfolk Southern Railway,Union Pacifc Railroad" 
 				use_last_as_default="true"/>
 		<combo key="reporting_marks" text="reporting_marks=*" values="BNSF,CN,CP,CSXT,FXE,GTW,KCS,KCSM,NS,UP" 
 				use_last_as_default="true"/>
+		<optional>
+		<text key="railway:position" text="Milepost:" default="" />
+		</optional>
 	</item>
 	<item name="Passenger Station/Halt" type="node">
 		<label text="Questions?  See wiki OpenRailwayMap/Tagging in North America." />
@@ -299,6 +312,9 @@
 				use_last_as_default="true"/>
 		<combo key="reporting_marks" text="reporting_marks=*" values="BNSF,CN,CP,CSXT,FXE,GTW,KCS,KCSM,NS,UP" 
 				use_last_as_default="true"/>
+		<optional>
+		<text key="railway:position" text="Milepost:" default="" />
+		</optional>
 	</item>
 	<separator />
 	<item name="Railway Junction (Control Point)" type="node">
@@ -306,7 +322,7 @@
 		<space />
 		<label text="Required Attributes:" />
 		<space />
-		<check key="railway" text="railway=junction" value_on="junction" default="off" value_off=""/>
+		<key key="railway" value="junction" />
 		<text key="name" text="name=*" default="" />
 		<optional>
 		<label text="Operator whose dispatcher controls crossing (if known):" />
@@ -314,6 +330,7 @@
 				use_last_as_default="true"/>
 		<combo key="reporting_marks" text="reporting_marks=*" values="BNSF,CN,CP,CSXT,FXE,GTW,KCS,KCSM,NS,UP" 
 				use_last_as_default="true"/>
+		<text key="railway:position" text="Milepost:" default="" />
 		</optional>
 	</item>
 	<item name="Railway Spur Junction (Control Point)" type="node">
@@ -321,7 +338,7 @@
 		<space />
 		<label text="Required Attributes:" />
 		<space />
-		<check key="railway" text="railway=spur_junction" value_on="spur_junction" default="off" value_off=""/>
+		<key key="railway" value="spur_junction" />
 		<text key="name" text="name=*" default="" />
 		<optional>
 		<label text="Operator whose dispatcher controls junction (if known):" />
@@ -329,6 +346,7 @@
 				use_last_as_default="true"/>
 		<combo key="reporting_marks" text="reporting_marks=*" values="BNSF,CN,CP,CSXT,FXE,GTW,KCS,KCSM,NS,UP" 
 				use_last_as_default="true"/>
+		<text key="railway:position" text="Milepost:" default="" />
 		</optional>
 	</item>
 	<item name="Railway Crossover (Control Point)" type="node">
@@ -336,9 +354,10 @@
 		<space />
 		<label text="Required Attributes:" />
 		<space />
-		<check key="railway" text="railway=crossover" value_on="crossover" default="off" value_off=""/>
-		<optional>
+		<key key="railway" value="crossover" />
 		<text key="name" text="name=*" default="" />
+		<optional>
+		<text key="railway:position" text="Milepost:" default="" />
 		</optional>
 	</item>
 	</group>
