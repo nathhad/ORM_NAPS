@@ -13,7 +13,7 @@ By default, JOSM caches downloaded presets, and doesn't look for an update until
 
 	macOS:		Users/<YourName>/Library/Caches/JOSM/cache
 
-	Linux:		My Linux machine is down - so if you know, please let me know so I can add it!  May vary by distro.
+	Linux:		/home/<YourName>/.josm/cache
 
 Once in the cache directory, find a file named "mirror_http___www.aturnofthenut.com_distribute_osm_naps_ORM_NAPS.zip" and simply delete it.  Then restart JOSM, and the latest version will automatically be downloaded and reinstalled.
 	
