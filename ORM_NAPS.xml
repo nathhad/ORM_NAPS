@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0"
     author="Chuck Sanders nathhad@gmail.com"
-    version="0.1.4"
+    version="0.1.5"
     shortdescription="OpenRailwayMap North America Presets File"
     description="Preset for most common tag combinations in North America"
 	link="https://wiki.openstreetmap.org/wiki/OpenRailwayMap/Tagging_in_North_America#Useful_Combination"
@@ -355,6 +355,18 @@
 		<label text="Required Attributes:" />
 		<space />
 		<key key="railway" value="crossover" />
+		<text key="name" text="name=*" default="" />
+		<optional>
+		<text key="railway:position" text="Milepost:" default="" />
+		</optional>
+	</item>
+	<item name="Railway Control Point (other)" type="node">
+		<label text="For Control Points not at a junction, siding end, or crossover." />
+		<label text="Questions?  See wiki OpenRailwayMap/Tagging in North America." />
+		<space />
+		<label text="Required Attributes:" />
+		<space />
+		<key key="railway" value="site" />
 		<text key="name" text="name=*" default="" />
 		<optional>
 		<text key="railway:position" text="Milepost:" default="" />
