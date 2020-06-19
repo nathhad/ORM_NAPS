@@ -1,95 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0"
     author="Chuck Sanders nathhad@gmail.com"
-    version="0.1.5"
+    version="0.1.6"
     shortdescription="OpenRailwayMap North America Presets File"
     description="Preset for most common tag combinations in North America"
 	link="https://wiki.openstreetmap.org/wiki/OpenRailwayMap/Tagging_in_North_America#Useful_Combination"
 	icon="ORM-NAPS.svg">
 
-	<group name="OpenRailwayMap NA" icon="ORM-NAPS.svg">
-	<item name="Active Main Track (with Usage=*)" type="way">
-		<label text="Questions?  See wiki OpenRailwayMap/Tagging in North America." />
-		<space />
-		<label text="Required Attributes:" />
-		<space />
-		<combo key="railway" text="railway=*" values="rail,light_rail,subway,tram,narrow_gauge" 
-				display_values="Rail, Light Rail, Subway, Tram (Streetcar), Narrow Gauge"
-				use_last_as_default="true"
-				values_sort="false"/>
-		<combo key="usage" text="usage=*" values="main,branch,industrial,military,tourism" 
-				display_values="Main, Branch, Industrial, Military, Tourism"
-				use_last_as_default="true"
-				values_sort="false"/>	
-		<space />
-		<combo key="operator" text="operator=*" values="BNSF Railway,Canadian National Railway,Canadian Pacific Railway,CSX Transportation,Ferromex,Grand Trunk Corporation,Kansas City Southern Railway,Kansas City Southern de México,Norfolk Southern Railway,Union Pacifc Railroad" 
-				use_last_as_default="true"/>
-		<combo key="reporting_marks" text="reporting_marks=*" values="BNSF,CN,CP,CSXT,FXE,GTW,KCS,KCSM,NS,UP" 
-				use_last_as_default="true"/>
-		<space />
-		<text key="name" text="name=*" default=""/>
-		<label text="(Railroad Subdivision.  Please leave blank if unknown.)" />
-		<text key="ref" text="ref=*" default=""/>
-		<label text="(Line Segment Number.  Please leave blank if unknown.)" />
-		<optional>
-		<combo key="gauge" text="gauge=*" values="1435,914,1067" 
-				display_values="Standard,3ft/36in,3.5ft/42in"
-				use_last_as_default="true"
-				values_sort="false"/>
-		<label text="(Enter as integer in mm if gauge not in list.)" />
-		<text key="electrified" text="electrified=*" default="no"/>
-		<text key="description" text="description=*" default=""/>
-		<label text="(Actual RR Co. track name.  Please leave blank if unknown." />
-		<label text="     Examples: Main 1, EB Main, etc.)" />
-		<check key="railway:preserved" text="railway:preserved=yes (heritage railway)?" default="off" value_off=""/>
-		<combo key="railway:track_class" text="railway:track_class=*" values="1,2,3,4,5,6,7,8,9,E" 
-				display_values="Class 1, Class 2, Class 3, Class 4, Class 5, Class 6, Class 7, Class 8, Class 9, Excepted"
-				default=""
-				values_sort="false"/>
-		<text key="maxspeed" text="maxspeed=*" default=""/>
-		<label text="(Enter space and mph after numeric value if not in kph.)" />
-		</optional>
-		<key key="tiger:reviewed" />
-	</item>
-	<item name="Active Service Track (with Service=*)" type="way">
-		<label text="Questions?  See wiki OpenRailwayMap/Tagging in North America." />
-		<space />
-		<label text="Required Attributes:" />
-		<space />
-		<combo key="railway" text="railway=*" values="rail,light_rail,subway,tram,narrow_gauge" 
-				display_values="Rail, Light Rail, Subway, Tram (Streetcar), Narrow Gauge"
-				use_last_as_default="true"
-				values_sort="false"/>
-		<combo key="service" text="service=*" values="spur,yard,siding,crossover" 
-				use_last_as_default="true"
-				values_sort="false"/>	
-		<space />
-		<combo key="operator" text="operator=*" values="BNSF Railway,Canadian National Railway,Canadian Pacific Railway,CSX Transportation,Ferromex,Grand Trunk Corporation,Kansas City Southern Railway,Kansas City Southern de México,Norfolk Southern Railway,Union Pacifc Railroad" 
-				use_last_as_default="true"/>
-		<combo key="reporting_marks" text="reporting_marks=*" values="BNSF,CN,CP,CSXT,FXE,GTW,KCS,KCSM,NS,UP" 
-				use_last_as_default="true"/>
-		<space />
-		<key key="name" />
-		<optional>
-		<combo key="gauge" text="gauge=*" values="1435,914,1067" 
-				display_values="Standard,3ft/36in,3.5ft/42in"
-				use_last_as_default="true"
-				values_sort="false"/>
-		<label text="(Enter as integer in mm if gauge not in list.)" />
-		<text key="electrified" text="electrified=*" default="no"/>
-		<text key="description" text="description=*" default=""/>
-		<label text="(Actual RR Co. track name.  Please leave blank if unknown.)" />
-		<check key="railway:preserved" text="railway:preserved=yes (heritage railway)?" default="off" value_off=""/>
-		<combo key="railway:track_class" text="railway:track_class=*" values="1,2,3,4,5,6,7,8,9,E" 
-				display_values="Class 1, Class 2, Class 3, Class 4, Class 5, Class 6, Class 7, Class 8, Class 9, Excepted"
-				default=""
-				values_sort="false"/>
-		<text key="maxspeed" text="maxspeed=*" default=""/>
-		<label text="(Enter space and mph after numeric value if not in kph.)" />
-		</optional>
-		<key key="tiger:reviewed" />
-	</item>
-	<group name="Inactive Tracks">
+<group name="OpenRailwayMap NA" icon="ORM-NAPS.svg">
+<item name="Show NAPS Version">
+	<label text="NAPS Version 0.1.6" />
+</item>
+<item name="Active Main Track (with Usage=*)" type="way">
+	<label text="Questions?  See wiki OpenRailwayMap/Tagging in North America." />
+	<space />
+	<label text="Required Attributes:" />
+	<space />
+	<combo key="railway" text="railway=*" values="rail,light_rail,subway,tram,narrow_gauge" 
+			display_values="Rail, Light Rail, Subway, Tram (Streetcar), Narrow Gauge"
+			use_last_as_default="true"
+			values_sort="false"/>
+	<combo key="usage" text="usage=*" values="main,branch,industrial,military,tourism" 
+			display_values="Main, Branch, Industrial, Military, Tourism"
+			use_last_as_default="true"
+			values_sort="false"/>	
+	<space />
+	<combo key="operator" text="operator=*" values="BNSF Railway,Canadian National Railway,Canadian Pacific Railway,CSX Transportation,Ferromex,Grand Trunk Corporation,Kansas City Southern Railway,Kansas City Southern de México,Norfolk Southern Railway,Union Pacifc Railroad" 
+			use_last_as_default="true"/>
+	<combo key="reporting_marks" text="reporting_marks=*" values="BNSF,CN,CP,CSXT,FXE,GTW,KCS,KCSM,NS,UP" 
+			use_last_as_default="true"/>
+	<space />
+	<text key="name" text="name=*" default=""/>
+	<label text="(Railroad Subdivision.  Please leave blank if unknown.)" />
+	<text key="ref" text="ref=*" default=""/>
+	<label text="(Line Segment Number.  Please leave blank if unknown.)" />
+	<optional>
+	<combo key="gauge" text="gauge=*" values="1435,914,1067" 
+			display_values="Standard,3ft/36in,3.5ft/42in"
+			use_last_as_default="true"
+			values_sort="false"/>
+	<label text="(Enter as integer in mm if gauge not in list.)" />
+	<text key="electrified" text="electrified=*" default="no"/>
+	<text key="description" text="description=*" default=""/>
+	<label text="(Actual RR Co. track name.  Please leave blank if unknown." />
+	<label text="     Examples: Main 1, EB Main, etc.)" />
+	<check key="railway:preserved" text="railway:preserved=yes (heritage railway)?" default="off" value_off=""/>
+	<combo key="railway:track_class" text="railway:track_class=*" values="1,2,3,4,5,6,7,8,9,E" 
+			display_values="Class 1, Class 2, Class 3, Class 4, Class 5, Class 6, Class 7, Class 8, Class 9, Excepted"
+			default=""
+			values_sort="false"/>
+	<text key="maxspeed" text="maxspeed=*" default=""/>
+	<label text="(Enter space and mph after numeric value if not in kph.)" />
+	</optional>
+	<key key="tiger:reviewed" />
+</item>
+<item name="Active Service Track (with Service=*)" type="way">
+	<label text="Questions?  See wiki OpenRailwayMap/Tagging in North America." />
+	<space />
+	<label text="Required Attributes:" />
+	<space />
+	<combo key="railway" text="railway=*" values="rail,light_rail,subway,tram,narrow_gauge" 
+			display_values="Rail, Light Rail, Subway, Tram (Streetcar), Narrow Gauge"
+			use_last_as_default="true"
+			values_sort="false"/>
+	<combo key="service" text="service=*" values="spur,yard,siding,crossover" 
+			use_last_as_default="true"
+			values_sort="false"/>	
+	<space />
+	<combo key="operator" text="operator=*" values="BNSF Railway,Canadian National Railway,Canadian Pacific Railway,CSX Transportation,Ferromex,Grand Trunk Corporation,Kansas City Southern Railway,Kansas City Southern de México,Norfolk Southern Railway,Union Pacifc Railroad" 
+			use_last_as_default="true"/>
+	<combo key="reporting_marks" text="reporting_marks=*" values="BNSF,CN,CP,CSXT,FXE,GTW,KCS,KCSM,NS,UP" 
+			use_last_as_default="true"/>
+	<space />
+	<key key="name" />
+	<optional>
+	<combo key="gauge" text="gauge=*" values="1435,914,1067" 
+			display_values="Standard,3ft/36in,3.5ft/42in"
+			use_last_as_default="true"
+			values_sort="false"/>
+	<label text="(Enter as integer in mm if gauge not in list.)" />
+	<text key="electrified" text="electrified=*" default="no"/>
+	<text key="description" text="description=*" default=""/>
+	<label text="(Actual RR Co. track name.  Please leave blank if unknown.)" />
+	<check key="railway:preserved" text="railway:preserved=yes (heritage railway)?" default="off" value_off=""/>
+	<combo key="railway:track_class" text="railway:track_class=*" values="1,2,3,4,5,6,7,8,9,E" 
+			display_values="Class 1, Class 2, Class 3, Class 4, Class 5, Class 6, Class 7, Class 8, Class 9, Excepted"
+			default=""
+			values_sort="false"/>
+	<text key="maxspeed" text="maxspeed=*" default=""/>
+	<label text="(Enter space and mph after numeric value if not in kph.)" />
+	</optional>
+	<key key="tiger:reviewed" />
+</item>
+<group name="Inactive Tracks">
 	<item name="Railway=Disused" type="way">
 		<label text="Questions?  See wiki OpenRailwayMap/Tagging in North America." />
 		<space />
@@ -214,165 +217,173 @@
 		</optional>
 		<key key="tiger:reviewed" />
 	</item>
-	</group>
-	<separator />
-	<item name="Bridge" type="way">
-		<label text="Questions?  See wiki OpenRailwayMap/Tagging in North America." />
-		<space />
-		<label text="Required Attributes:" />
-		<space />
-		<combo key="bridge" text="bridge=*" values="yes,trestle,viaduct,cantilever,movable" 
-				default="yes"
-				values_sort="false"/>
-		<text key="layer" text="layer=*" default="1" />
-		<optional>
-		<text key="bridge:name" text="bridge:name=*" default="" />
-		<text key="railway:position" text="Milepost:" default="" />
-		<space />
-		<label text="If movable, type:" />
-		<combo key="bridge:movable" text="bridge:movable=*" values="bascule,lift,swing" 
-				default=""/>
-		<space />
-		<label text="Is this bridge over navigable water?" />
-		<check key="seamark:type" text="seamark:type=bridge (for navigable water)" value_on="bridge" default="off" value_off=""/>
-		<label text="If navigable:" />
-		<combo key="seamark:bridge:category" text="seamark:bridge:category=*" values="fixed,bascule,lifting,swing,supension" 
-				values_sort="false"
-				default=""/>
-		</optional>
-	</item>
-	<item name="Tunnel" type="way">
-		<label text="Questions?  See wiki OpenRailwayMap/Tagging in North America." />
-		<space />
-		<label text="Required Attributes:" />
-		<space />>
-		<key key="tunnel" value="yes" />
-		<text key="layer" text="layer=*" default="1" />
-		<optional>
-		<text key="railway:position" text="Milepost:" default="" />
-		</optional>
-	</item>
-	<separator />
-	<item name="Railway Crossing (quick-apply)" type="node">
-		<key key="railway" value="railway_crossing" />
-	</item>
-	<item name="Level Crossing (quick-apply)" type="node">
-		<key key="railway" value="level_crossing" />
-	</item>
-	<item name="Owner/Operator Change (quick-apply)" type="node">
-		<key key="railway" value="owner_change" />
-	</item>
-	<item name="Switch/Turnout (quick-apply)" type="node">
-		<key key="railway" value="switch" />
-	</item>
-	<item name="Buffer Stop (quick-apply)" type="node">
-		<key key="railway" value="buffer_stop" />
-	</item>
-	<item name="Gate Across Track (quick-apply)" type="node">
-		<key key="barrier" value="gate" />
-	</item>
-	<item name="Derail" type="node">
-		<key key="railway" value="derail" />
-		<label text="Questions?  See wiki OpenRailwayMap/Tagging in North America." />
-		<space />
-		<label text="Required Attributes:" />
-		<space />
-		<combo key="railway:derail" text="railway:derail=*" values="wedge,trap_point,catch_point" 
-				display_values="Wedge,Trap point,Catch point"
-				values_sort="false"
-				default="wedge"/>
-	</item>
-	<separator />
-	<item name="Yard" type="node">
-		<label text="Questions?  See wiki OpenRailwayMap/Tagging in North America." />
-		<space />
-		<label text="Required Attributes:" />
-		<space />>
-		<key key="railway" value="yard" />
-		<text key="name" text="name=*" default="" />
-		<combo key="operator" text="operator=*" values="BNSF Railway,Canadian National Railway,Canadian Pacific Railway,CSX Transportation,Ferromex,Grand Trunk Corporation,Kansas City Southern Railway,Kansas City Southern de México,Norfolk Southern Railway,Union Pacifc Railroad" 
-				use_last_as_default="true"/>
-		<combo key="reporting_marks" text="reporting_marks=*" values="BNSF,CN,CP,CSXT,FXE,GTW,KCS,KCSM,NS,UP" 
-				use_last_as_default="true"/>
-		<optional>
-		<text key="railway:position" text="Milepost:" default="" />
-		</optional>
-	</item>
-	<item name="Passenger Station/Halt" type="node">
-		<label text="Questions?  See wiki OpenRailwayMap/Tagging in North America." />
-		<space />
-		<label text="Required Attributes:" />
-		<space />
-		<combo key="railway" text="railway=*" values="station,halt" 
-				values_sort="false"
-				default="station"/>
-		<text key="name" text="name=*" default="" />
-		<text key="short_name" text="short_name=*" default="" />
-		<combo key="operator" text="operator=*" values="BNSF Railway,Canadian National Railway,Canadian Pacific Railway,CSX Transportation,Ferromex,Grand Trunk Corporation,Kansas City Southern Railway,Kansas City Southern de México,Norfolk Southern Railway,Union Pacifc Railroad" 
-				use_last_as_default="true"/>
-		<combo key="reporting_marks" text="reporting_marks=*" values="BNSF,CN,CP,CSXT,FXE,GTW,KCS,KCSM,NS,UP" 
-				use_last_as_default="true"/>
-		<optional>
-		<text key="railway:position" text="Milepost:" default="" />
-		</optional>
-	</item>
-	<separator />
-	<item name="Railway Junction (Control Point)" type="node">
-		<label text="Questions?  See wiki OpenRailwayMap/Tagging in North America." />
-		<space />
-		<label text="Required Attributes:" />
-		<space />
-		<key key="railway" value="junction" />
-		<text key="name" text="name=*" default="" />
-		<optional>
-		<label text="Operator whose dispatcher controls crossing (if known):" />
-		<combo key="operator" text="operator=*" values="BNSF Railway,Canadian National Railway,Canadian Pacific Railway,CSX Transportation,Ferromex,Grand Trunk Corporation,Kansas City Southern Railway,Kansas City Southern de México,Norfolk Southern Railway,Union Pacifc Railroad" 
-				use_last_as_default="true"/>
-		<combo key="reporting_marks" text="reporting_marks=*" values="BNSF,CN,CP,CSXT,FXE,GTW,KCS,KCSM,NS,UP" 
-				use_last_as_default="true"/>
-		<text key="railway:position" text="Milepost:" default="" />
-		</optional>
-	</item>
-	<item name="Railway Spur Junction (Control Point)" type="node">
-		<label text="Questions?  See wiki OpenRailwayMap/Tagging in North America." />
-		<space />
-		<label text="Required Attributes:" />
-		<space />
-		<key key="railway" value="spur_junction" />
-		<text key="name" text="name=*" default="" />
-		<optional>
-		<label text="Operator whose dispatcher controls junction (if known):" />
-		<combo key="operator" text="operator=*" values="BNSF Railway,Canadian National Railway,Canadian Pacific Railway,CSX Transportation,Ferromex,Grand Trunk Corporation,Kansas City Southern Railway,Kansas City Southern de México,Norfolk Southern Railway,Union Pacifc Railroad" 
-				use_last_as_default="true"/>
-		<combo key="reporting_marks" text="reporting_marks=*" values="BNSF,CN,CP,CSXT,FXE,GTW,KCS,KCSM,NS,UP" 
-				use_last_as_default="true"/>
-		<text key="railway:position" text="Milepost:" default="" />
-		</optional>
-	</item>
-	<item name="Railway Crossover (Control Point)" type="node">
-		<label text="Questions?  See wiki OpenRailwayMap/Tagging in North America." />
-		<space />
-		<label text="Required Attributes:" />
-		<space />
-		<key key="railway" value="crossover" />
-		<text key="name" text="name=*" default="" />
-		<optional>
-		<text key="railway:position" text="Milepost:" default="" />
-		</optional>
-	</item>
-	<item name="Railway Control Point (other)" type="node">
-		<label text="For Control Points not at a junction, siding end, or crossover." />
-		<label text="Questions?  See wiki OpenRailwayMap/Tagging in North America." />
-		<space />
-		<label text="Required Attributes:" />
-		<space />
-		<key key="railway" value="site" />
-		<text key="name" text="name=*" default="" />
-		<optional>
-		<text key="railway:position" text="Milepost:" default="" />
-		</optional>
-	</item>
-	</group>
+</group>
+<separator />
+<item name="Bridge" type="way">
+	<label text="Questions?  See wiki OpenRailwayMap/Tagging in North America." />
+	<space />
+	<label text="Required Attributes:" />
+	<space />
+	<combo key="bridge" text="bridge=*" values="yes,trestle,viaduct,cantilever,movable" 
+			default="yes"
+			values_sort="false"/>
+	<text key="layer" text="layer=*" default="1" />
+	<optional>
+	<text key="bridge:name" text="bridge:name=*" default="" />
+	<text key="railway:position" text="Milepost:" default="" />
+	<space />
+	<label text="If movable, type:" />
+	<combo key="bridge:movable" text="bridge:movable=*" values="bascule,lift,swing" 
+			default=""/>
+	<space />
+	<label text="Is this bridge over navigable water?" />
+	<check key="seamark:type" text="seamark:type=bridge (for navigable water)" value_on="bridge" default="off" value_off=""/>
+	<label text="If navigable:" />
+	<combo key="seamark:bridge:category" text="seamark:bridge:category=*" values="fixed,bascule,lifting,swing,supension" 
+			values_sort="false"
+			default=""/>
+	</optional>
+</item>
+<item name="Tunnel" type="way">
+	<label text="Questions?  See wiki OpenRailwayMap/Tagging in North America." />
+	<space />
+	<label text="Required Attributes:" />
+	<space />
+	<key key="tunnel" value="yes" />
+	<text key="layer" text="layer=*" default="1" />
+	<optional>
+	<text key="railway:position" text="Milepost:" default="" />
+	</optional>
+</item>
+<separator />
+<item name="Railway Crossing (quick-apply)" type="node">
+	<key key="railway" value="railway_crossing" />
+</item>
+<item name="Level Crossing (quick-apply)" type="node">
+	<key key="railway" value="level_crossing" />
+</item>
+<item name="Owner/Operator Change (quick-apply)" type="node">
+	<key key="railway" value="owner_change" />
+</item>
+<item name="Switch/Turnout (quick-apply)" type="node">
+	<key key="railway" value="switch" />
+</item>
+<item name="Buffer Stop (quick-apply)" type="node">
+	<key key="railway" value="buffer_stop" />
+</item>
+<item name="Gate Across Track (quick-apply)" type="node">
+	<key key="barrier" value="gate" />
+</item>
+<item name="Derail" type="node">
+	<key key="railway" value="derail" />
+	<label text="Questions?  See wiki OpenRailwayMap/Tagging in North America." />
+	<space />
+	<label text="Required Attributes:" />
+	<space />
+	<combo key="railway:derail" text="railway:derail=*" values="wedge,trap_point,catch_point" 
+			display_values="Wedge,Trap point,Catch point"
+			values_sort="false"
+			default="wedge"/>
+</item>
+<separator />
+<item name="Yard" type="node">
+	<label text="Questions?  See wiki OpenRailwayMap/Tagging in North America." />
+	<space />
+	<label text="Required Attributes:" />
+	<space />
+	<key key="railway" value="yard" />
+	<text key="name" text="name=*" default="" />
+	<combo key="operator" text="operator=*" values="BNSF Railway,Canadian National Railway,Canadian Pacific Railway,CSX Transportation,Ferromex,Grand Trunk Corporation,Kansas City Southern Railway,Kansas City Southern de México,Norfolk Southern Railway,Union Pacifc Railroad" 
+			use_last_as_default="true"/>
+	<combo key="reporting_marks" text="reporting_marks=*" values="BNSF,CN,CP,CSXT,FXE,GTW,KCS,KCSM,NS,UP" 
+			use_last_as_default="true"/>
+	<optional>
+	<text key="railway:position" text="Milepost:" default="" />
+	</optional>
+</item>
+<item name="Passenger Station/Halt" type="node">
+	<label text="Questions?  See wiki OpenRailwayMap/Tagging in North America." />
+	<space />
+	<label text="Required Attributes:" />
+	<space />
+	<combo key="railway" text="railway=*" values="station,halt" 
+			values_sort="false"
+			default="station"/>
+	<text key="name" text="name=*" default="" />
+	<text key="short_name" text="short_name=*" default="" />
+	<combo key="operator" text="operator=*" values="BNSF Railway,Canadian National Railway,Canadian Pacific Railway,CSX Transportation,Ferromex,Grand Trunk Corporation,Kansas City Southern Railway,Kansas City Southern de México,Norfolk Southern Railway,Union Pacifc Railroad" 
+			use_last_as_default="true"/>
+	<combo key="reporting_marks" text="reporting_marks=*" values="BNSF,CN,CP,CSXT,FXE,GTW,KCS,KCSM,NS,UP" 
+			use_last_as_default="true"/>
+	<optional>
+	<text key="railway:position" text="Milepost:" default="" />
+	</optional>
+</item>
+<separator />
+<item name="Railway Junction (Control Point)" type="node">
+	<label text="Questions?  See wiki OpenRailwayMap/Tagging in North America." />
+	<space />
+	<label text="Required Attributes:" />
+	<space />
+	<key key="railway" value="junction" />
+	<text key="name" text="name=*" default="" />
+	<optional>
+	<label text="Operator whose dispatcher controls crossing (if known):" />
+	<combo key="operator" text="operator=*" values="BNSF Railway,Canadian National Railway,Canadian Pacific Railway,CSX Transportation,Ferromex,Grand Trunk Corporation,Kansas City Southern Railway,Kansas City Southern de México,Norfolk Southern Railway,Union Pacifc Railroad" 
+			use_last_as_default="true"/>
+	<combo key="reporting_marks" text="reporting_marks=*" values="BNSF,CN,CP,CSXT,FXE,GTW,KCS,KCSM,NS,UP" 
+			use_last_as_default="true"/>
+	<text key="railway:position" text="Milepost:" default="" />
+	</optional>
+</item>
+<item name="Railway Spur Junction (Control Point)" type="node">
+	<label text="Questions?  See wiki OpenRailwayMap/Tagging in North America." />
+	<space />
+	<label text="Required Attributes:" />
+	<space />
+	<key key="railway" value="spur_junction" />
+	<text key="name" text="name=*" default="" />
+	<optional>
+	<label text="Operator whose dispatcher controls junction (if known):" />
+	<combo key="operator" text="operator=*" values="BNSF Railway,Canadian National Railway,Canadian Pacific Railway,CSX Transportation,Ferromex,Grand Trunk Corporation,Kansas City Southern Railway,Kansas City Southern de México,Norfolk Southern Railway,Union Pacifc Railroad" 
+			use_last_as_default="true"/>
+	<combo key="reporting_marks" text="reporting_marks=*" values="BNSF,CN,CP,CSXT,FXE,GTW,KCS,KCSM,NS,UP" 
+			use_last_as_default="true"/>
+	<text key="railway:position" text="Milepost:" default="" />
+	</optional>
+</item>
+<item name="Railway Crossover (Control Point)" type="node">
+	<label text="Questions?  See wiki OpenRailwayMap/Tagging in North America." />
+	<space />
+	<label text="Required Attributes:" />
+	<space />
+	<key key="railway" value="crossover" />
+	<text key="name" text="name=*" default="" />
+	<optional>
+	<combo key="operator" text="operator=*" values="BNSF Railway,Canadian National Railway,Canadian Pacific Railway,CSX Transportation,Ferromex,Grand Trunk Corporation,Kansas City Southern Railway,Kansas City Southern de México,Norfolk Southern Railway,Union Pacifc Railroad" 
+			use_last_as_default="true"/>
+	<combo key="reporting_marks" text="reporting_marks=*" values="BNSF,CN,CP,CSXT,FXE,GTW,KCS,KCSM,NS,UP" 
+			use_last_as_default="true"/>
+	<text key="railway:position" text="Milepost:" default="" />
+	</optional>
+</item>
+<item name="Railway Control Point (other)" type="node">
+	<label text="For Control Points not at a junction, siding end, or crossover." />
+	<label text="Questions?  See wiki OpenRailwayMap/Tagging in North America." />
+	<space />
+	<label text="Required Attributes:" />
+	<space />
+	<key key="railway" value="site" />
+	<text key="name" text="name=*" default="" />
+	<optional>
+	<combo key="operator" text="operator=*" values="BNSF Railway,Canadian National Railway,Canadian Pacific Railway,CSX Transportation,Ferromex,Grand Trunk Corporation,Kansas City Southern Railway,Kansas City Southern de México,Norfolk Southern Railway,Union Pacifc Railroad" 
+			use_last_as_default="true"/>
+	<combo key="reporting_marks" text="reporting_marks=*" values="BNSF,CN,CP,CSXT,FXE,GTW,KCS,KCSM,NS,UP" 
+			use_last_as_default="true"/>
+	<text key="railway:position" text="Milepost:" default="" />
+	</optional>
+</item>
+</group>
 
 
 </presets>
