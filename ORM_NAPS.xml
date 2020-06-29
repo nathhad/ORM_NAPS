@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0"
     author="Chuck Sanders nathhad@gmail.com"
-    version="0.1.6"
+    version="0.1.7"
     shortdescription="OpenRailwayMap North America Presets File"
     description="Preset for most common tag combinations in North America"
 	link="https://wiki.openstreetmap.org/wiki/OpenRailwayMap/Tagging_in_North_America#Useful_Combination"
@@ -9,7 +9,7 @@
 
 <group name="OpenRailwayMap NA" icon="ORM-NAPS.svg">
 <item name="Show NAPS Version">
-	<label text="NAPS Version 0.1.6" />
+	<label text="NAPS Version 0.1.7" />
 </item>
 <item name="Active Main Track (with Usage=*)" type="way">
 	<label text="Questions?  See wiki OpenRailwayMap/Tagging in North America." />
@@ -381,6 +381,21 @@
 	<combo key="reporting_marks" text="reporting_marks=*" values="BNSF,CN,CP,CSXT,FXE,GTW,KCS,KCSM,NS,UP" 
 			use_last_as_default="true"/>
 	<text key="railway:position" text="Milepost:" default="" />
+	</optional>
+</item>
+<item name="Signal" type="node">
+	<label text="For railway signals." />
+	<label text="Questions?  See wiki OpenRailwayMap/Tagging in North America." />
+	<space />
+	<label text="Required Attributes:" />
+	<space />
+	<key key="railway" value="signal" />
+	<combo key="railway:signal:direction" text="Signal direction:" values="forward,backward,both" 
+			values_sort="false"
+			default="forward" />
+	<optional>
+	<text key="ref" text="ref=*" default="" />
+	<text key="railway:position" text="railway:position=*" default="" />
 	</optional>
 </item>
 </group>
